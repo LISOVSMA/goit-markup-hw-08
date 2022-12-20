@@ -1,0 +1,87 @@
+.header {
+  border-bottom: 1px solid var(--line-color);
+  &__box {
+    @include flex-align;
+  }
+  &__auth-nav {
+    margin-left: auto;
+  }
+}
+
+.navigation {
+  @include flex-align;
+  &__list {
+    @include flex-align;
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__link {
+    position: relative;
+    padding: 32px 0px;
+    @include font(500, 14px, 16px, 0.02em);
+    color: var(--title-text-color);
+    transition: color 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 250ms var(--timing-function);
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+    &:hover::after {
+      transform: scaleX(1);
+    }
+    &--active {
+      color: var(--accent-color);
+    }
+    &--active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.auth-nav {
+  @include flex-align;
+  &__item:not(:last-child) {
+    margin-right: 31.5px;
+  }
+  &__contact {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0px;
+    @include font(500, 14px, 16px, 0.02em);
+    color: inherit;
+    transition: color 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}

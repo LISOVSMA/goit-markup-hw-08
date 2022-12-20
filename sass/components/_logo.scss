@@ -1,0 +1,12 @@
+.logo {
+  font-family: var(--secondary-font);
+  color: var(--secondary-text-color);
+  @include font(700, 26px, 31px, 0.03em);
+  &--inverse {
+    margin-right: 93px;
+    color: var(--logo-color);
+  }
+  &__accent {
+    color: var(--accent-color);
+  }
+}
