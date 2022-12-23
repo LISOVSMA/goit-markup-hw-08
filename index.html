@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <div class="container header__box">
         <nav class="navigation">
           <a href="#" class="logo logo--inverse link"
@@ -59,10 +59,10 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
 
     <main>
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container">
         <h1 class="hero__title">
           ЕФЕКТИВНІ РІШЕННЯ ДЛЯ <br />
@@ -72,7 +72,7 @@
           Замовити послугу
         </button>
         </div>
-      </section>
+      </section> -->
       <section class="features section">
         <div class="container">
           <h2 class="visually-hidden">Особливоті</h2>
@@ -127,7 +127,7 @@
           </ul>
         </div>
       </section>
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="secondary-title">Чим ми займаємося</h2>
           <ul class="products">
@@ -166,22 +166,50 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="team section">
+      </section> -->
+      <!-- <section class="team section">
         <div class="container">
           <h2 class="secondary-title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/foto1.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto1-desktop.jpg    1x,
+                    ./images/foto1-desktop-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto1-tablet.jpg    1x,
+                    ./images/foto1-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto1-mobile.jpg    1x,
+                    ./images/foto1-mobile-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/foto1.jpg"
+                  alt="Ігор Дем'яненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="team__content">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__major">Product Designer</p>
-                 <ul class="social">
+                <ul class="social">
                   <li class="social__item">
                     <a href="#" class="social__link link">
                       <svg width="20" height="20" class="social__icon">
@@ -213,17 +241,44 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item"">
-              <img
-                src="./images/foto2.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+            <li class="team__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto2-desktop.jpg    1x,
+                    ./images/foto2-desktop-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto2-tablet.jpg    1x,
+                    ./images/foto2-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto2-mobile.jpg    1x,
+                    ./images/foto2-mobile-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/foto2.jpg"
+                  alt="Ольга Рєпіна"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__major">Frontend Developer</p>
-                 <ul class="social">
+                <ul class="social">
                   <li class="social__item">
                     <a href="#" class="social__link link">
                       <svg width="20" height="20" class="social__icon">
@@ -255,13 +310,40 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item"">
-              <img
-                src="./images/foto3.jpg"
-                alt="Микола Тарасов"
-                width="270"
-                height="260"
-              />
+            <li class="team__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto3-desktop.jpg    1x,
+                    ./images/foto3-desktop-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto3-tablet.jpg    1x,
+                    ./images/foto3-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto3-mobile.jpg    1x,
+                    ./images/foto3-mobile-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/foto3.jpg"
+                  alt="Микола Тарасов"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__major">Marketing</p>
@@ -297,17 +379,44 @@
                 </ul>
               </div>
             </li>
-            <li class="team__item"">
-              <img
-                src="./images/foto4.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+            <li class="team__item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/foto4-desktop.jpg    1x,
+                    ./images/foto4-desktop-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto4-tablet.jpg    1x,
+                    ./images/foto4-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/foto4-mobile.jpg    1x,
+                    ./images/foto4-mobile-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="team__image"
+                  src="./images/foto4.jpg"
+                  alt="Михайло Єрмаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="team__content">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__major">UI Designer</p>
-                 <ul class="social">
+                <ul class="social">
                   <li class="social__item">
                     <a href="#" class="social__link link">
                       <svg width="20" height="20" class="social__icon">
@@ -341,8 +450,8 @@
             </li>
           </ul>
         </div>
-      </section>
-      <section class="section">
+      </section> -->
+      <!-- <section class="section">
         <div class="container">
           <h2 class="secondary-title">Постійні клієнти</h2>
           <ul class="clients">
@@ -390,9 +499,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer__box">
         <div class="nav footer__section">
           <a href="#" class="logo link"
@@ -474,20 +583,27 @@
           </button>
         </form>
       </div>
-    </footer>
+    </footer> -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__btn" data-modal-close>
           <svg width="18" height="18">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
-        </button> 
+        </button>
         <form class="modal-form">
-          <p class="modal-form__title">Залиште свої дані, ми вам передзвонимо</p>
+          <p class="modal-form__title">
+            Залиште свої дані, ми вам передзвонимо
+          </p>
           <div class="modal-form__box">
             <label for="name" class="modal-form__label">Ім'я</label>
             <div class="modal-form__field">
-              <input type="text" class="modal-form__input" name="name" id="name" />
+              <input
+                type="text"
+                class="modal-form__input"
+                name="name"
+                id="name"
+              />
               <svg width="18" height="18" class="modal-form__icon">
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
@@ -505,7 +621,12 @@
           <div class="modal-form__box">
             <label for="email" class="modal-form__label">Пошта</label>
             <div class="modal-form__field">
-              <input type="email" class="modal-form__input" name="email" id="email" />
+              <input
+                type="email"
+                class="modal-form__input"
+                name="email"
+                id="email"
+              />
               <svg width="18" height="18" class="modal-form__icon">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
@@ -538,7 +659,9 @@
               </span>
             </label>
           </div>
-          <button type="submit" class="button modal-form__button">Відправити</button>
+          <button type="submit" class="button modal-form__button">
+            Відправити
+          </button>
         </form>
       </div>
     </div>

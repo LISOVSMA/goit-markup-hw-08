@@ -1,6 +1,8 @@
 .secondary-title {
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
-  @include font(700, 36px, 42px, 0.03em);
+  // @include font(700, 36px, 42px, 0.03em);
+  @include font(700, 28px, 33px, 0.03em);
   color: var(--title-text-color);
 }

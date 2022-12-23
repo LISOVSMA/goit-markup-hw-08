@@ -1,19 +1,28 @@
 .features {
-  padding-bottom: 0;
+  @include desktop {
+    padding-bottom: 0;
+  }
   &__list {
     display: flex;
+    flex-wrap: wrap;
     margin-left: calc(-1 * 30px);
   }
 
   &__item {
     margin-left: 30px;
-    flex-basis: calc(100% / 4 - 30px);
+    flex-basis: 100%;
+    @include tablet {
+      flex-basis: calc(100% / 2 - 30px);
+    }
+    @include desktop {
+      flex-basis: calc(100% / 4 - 30px);
+    }
   }
 
   &__box {
     margin-bottom: 30px;
     @include flex-align-justify;
-    width: 270px;
+    // width: 270px;
     height: 120px;
     background-color: var(--overlay-background-color);
     border-radius: 4px;
@@ -24,9 +33,15 @@
     @include font(700, 14px, 16px, 0.03em);
     text-transform: uppercase;
     color: var(--title-text-color);
+    @include tablet-max {
+      text-align: center;
+    }
   }
 
   &__text {
     @include font(400, 14px, 24px, 0.03em);
+    @include desktop-max {
+      margin-bottom: 30px;
+    }
   }
 }

@@ -24,5 +24,8 @@ img {
 }
 
 .section {
-  padding: 94px 0px;
+  padding: 60px 0px;
+  @include desktop {
+    padding: 94px 0px;
+  }
 }
