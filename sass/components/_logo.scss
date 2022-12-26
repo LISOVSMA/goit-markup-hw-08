@@ -10,6 +10,9 @@
   }
   &--inverse {
     color: var(--logo-color);
+    @include tablet {
+      margin-right: 88px;
+    }
     @include desktop {
       margin-right: 93px;
     }

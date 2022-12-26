@@ -132,6 +132,11 @@ img {
 .logo--inverse {
   color: var(--logo-color);
 }
+@media screen and (min-width: 768px) {
+  .logo--inverse {
+    margin-right: 88px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logo--inverse {
     margin-right: 93px;
@@ -239,6 +244,7 @@ img {
   margin-right: 50px;
 }
 .navigation__link {
+  display: block;
   position: relative;
   padding: 32px 0px;
   font-weight: 500;
@@ -270,6 +276,7 @@ img {
   transform: scaleX(1);
 }
 .navigation__link--active {
+  position: relative;
   color: var(--accent-color);
 }
 .navigation__link--active::after {
@@ -289,21 +296,32 @@ img {
 }
 @media screen and (min-width: 768px) {
   .auth-nav {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav {
     display: flex;
     align-items: center;
   }
 }
 .auth-nav__item:not(:last-child) {
-  margin-right: 31.5px;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav__item:not(:last-child) {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
 }
 .auth-nav__contact {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 32px 0px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1428571429;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: inherit;
   transition: color 250ms var(--timing-function);
@@ -311,9 +329,35 @@ img {
 .auth-nav__contact:hover, .auth-nav__contact:focus {
   color: var(--accent-color);
 }
-.auth-nav__icon {
+@media screen and (min-width: 1200px) {
+  .auth-nav__contact {
+    padding: 32px 0px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
+  }
+}
+.auth-nav__icon-mail {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav__icon-mail {
+    margin-right: 10px;
+    width: 16px;
+    height: 12px;
+  }
+}
+.auth-nav__icon-phone {
+  fill: currentColor;
+  margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav__icon-phone {
+    margin-right: 10px;
+    height: 16px;
+  }
 }
 
 .mobile-menu {

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header">
       <div class="container header__box">
         <nav class="navigation">
@@ -26,7 +27,9 @@
           >
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link navigation__link--active link"
+              <a
+                href="./index.html"
+                class="navigation__link navigation__link--active link"
                 >Студія</a
               >
             </li>
@@ -43,7 +46,7 @@
         <ul class="auth-nav header__auth-nav">
           <li class="auth-nav__item">
             <a href="mailto:info@devstudio.com" class="auth-nav__contact link">
-              <svg width="16" height="12" class="auth-nav__icon">
+              <svg width="14" height="10" class="auth-nav__icon-mail">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -51,14 +54,13 @@
           </li>
           <li class="auth-nav__item">
             <a href="tel:+380961111111" class="auth-nav__contact link">
-              <svg width="10" height="16" class="auth-nav__icon">
+              <svg width="10" height="14" class="auth-nav__icon-phone">
                 <use href="./images/icons.svg#icon-Vector"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
-
         <button
           class="menu-toggle js-open-menu"
           aria-expanded="false"
@@ -74,9 +76,7 @@
         </button>
       </div>
     </header>
-
-    <!-- Мобільне меню -->
-
+    <!-- MOBILE MENU -->
     <div class="mobile-menu js-menu-container" id="mobile-menu">
       <button class="menu-toggle js-close-menu" type="button">
         <svg width="40" height="40" aria-label="Кнопка мобільного меню">
@@ -86,7 +86,6 @@
           ></use>
         </svg>
       </button>
-
       <ul class="mobile-navigation">
         <li class="mobile-navigation__item">
           <a
@@ -161,9 +160,7 @@
         </li>
       </ul>
     </div>
-
     <!-- MAIN -->
-
     <main>
       <section class="hero">
         <div class="container">
@@ -607,6 +604,7 @@
         </div>
       </section>
     </main>
+    <!-- FOOTER -->
     <!-- <footer class="footer">
       <div class="container footer__box">
         <div class="nav footer__section">

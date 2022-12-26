@@ -21,6 +21,7 @@
     margin-right: 50px;
   }
   &__link {
+    display: block;
     position: relative;
     padding: 32px 0px;
     @include font(500, 14px, 16px, 0.02em);
@@ -49,6 +50,7 @@
       transform: scaleX(1);
     }
     &--active {
+      position: relative;
       color: var(--accent-color);
     }
     &--active::after {
@@ -68,45 +70,54 @@
 .auth-nav {
   display: none;
   @include tablet {
+    display: block;
+  }
+  @include desktop {
     @include flex-align;
   }
   &__item:not(:last-child) {
-    margin-right: 31.5px;
+    margin-right: 0;
+    margin-bottom: 10px;
+    @include desktop {
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
   }
   &__contact {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 32px 0px;
-    @include font(500, 14px, 16px, 0.02em);
+    @include font(500, 12px, 14px, 0.02em);
     color: inherit;
     transition: color 250ms var(--timing-function);
     &:hover,
     &:focus {
       color: var(--accent-color);
     }
+    @include desktop {
+      padding: 32px 0px;
+      @include font(500, 14px, 16px, 0.02em);
+    }
   }
 
-  &__icon {
+  &__icon-mail {
     fill: currentColor;
-    margin-right: 10px;
+    margin-right: 8px;
+    @include desktop {
+      margin-right: 10px;
+      width: 16px;
+      height: 12px;
+    }
+  }
+  &__icon-phone {
+    fill: currentColor;
+    margin-right: 8px;
+    @include desktop {
+      margin-right: 10px;
+      height: 16px;
+    }
   }
 }
-
-// .open-button {
-//   margin-left: auto;
-//   padding: 0;
-//   border: none;
-//   background-color: transparent;
-//   transition: fill 250ms var(--timing-function);
-//   &:hover,
-//   &:focus {
-//     fill: var(--accent-color);
-//   }
-//   @include tablet {
-//     display: none;
-//   }
-// }
 
 .mobile-menu {
   position: fixed;
