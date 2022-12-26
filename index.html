@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__box">
         <nav class="navigation">
           <a href="#" class="logo logo--inverse link"
@@ -58,21 +58,124 @@
             >
           </li>
         </ul>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg width="40" height="40" aria-label="Кнопка мобільного меню">
+            <use
+              class="menu-button__icon"
+              href="./images/icons.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+    </header>
+
+    <!-- Мобільне меню -->
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg width="40" height="40" aria-label="Кнопка мобільного меню">
+          <use
+            class="close-button__icon"
+            href="./images/icons.svg#icon-close"
+          ></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-navigation">
+        <li class="mobile-navigation__item">
+          <a
+            href="#"
+            class="mobile-navigation__link mobile-navigation__link--active link"
+            >Студія</a
+          >
+        </li>
+        <li class="mobile-navigation__item">
+          <a href="./portfolio.html" class="mobile-navigation__link link"
+            >Портфоліо</a
+          >
+        </li>
+        <li class="mobile-navigation__item">
+          <a href="#" class="mobile-navigation__link link">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contact">
+        <li class="mobile-contact__item">
+          <a href="tel:+380961111111" class="mobile-contact__tel link">
+            +38 096 111 11 11</a
+          >
+        </li>
+        <li class="mobile-contact__item">
+          <a href="mailto:info@devstudio.com" class="mobile-contact__link link">
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-social">
+        <li class="mobile-social__item">
+          <a
+            class="mobile-social__link link"
+            href="https://www.instagram.com"
+            rel="noreferrer noopener"
+            target="_blank"
+            title="Instagram"
+            >Instagram</a
+          >
+        </li>
+        <li class="mobile-social__item">
+          <a
+            class="mobile-social__link link"
+            href="https://twitter.com"
+            rel="noreferrer noopener"
+            target="_blank"
+            title="Twitter"
+            >Twitter</a
+          >
+        </li>
+        <li class="mobile-social__item">
+          <a
+            class="mobile-social__link link"
+            href="https://www.facebook.com"
+            rel="noreferrer noopener"
+            target="_blank"
+            title="Facebook"
+            >Facebook</a
+          >
+        </li>
+        <li class="mobile-social__item">
+          <a
+            class="mobile-social__link link"
+            href="https://www.linkedin.com"
+            rel="noreferrer noopener"
+            target="_blank"
+            title="LinkedIn"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- MAIN -->
 
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
-        <h1 class="hero__title">
-          ЕФЕКТИВНІ РІШЕННЯ ДЛЯ <br />
-          ВАШОГО БІЗНЕСУ
-        </h1>
-        <button class="button hero__button" type="button" data-modal-open>
-          Замовити послугу
-        </button>
+          <h1 class="hero__title">
+            ЕФЕКТИВНІ РІШЕННЯ ДЛЯ <br />
+            ВАШОГО БІЗНЕСУ
+          </h1>
+          <button class="button hero__button" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
-      </section> -->
+      </section>
       <section class="features section">
         <div class="container">
           <h2 class="visually-hidden">Особливоті</h2>
@@ -454,7 +557,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="secondary-title">Постійні клієнти</h2>
           <ul class="clients">
@@ -502,7 +605,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- <footer class="footer">
       <div class="container footer__box">
@@ -658,7 +761,7 @@
               <span class="modal-form__check-icon"></span>
               <span>
                 Погоджуюся з розсилкою та приймаю
-                <a href="#" class="modal-form__link">Умови договору</a>
+                <a href="#" class="modal-form__link link">Умови договору</a>
               </span>
             </label>
           </div>
@@ -669,5 +772,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

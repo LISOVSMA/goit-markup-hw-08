@@ -9,20 +9,26 @@
       flex-wrap: wrap;
       gap: 30px;
     }
+    @include desktop {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0;
+      margin-left: -30px;
+    }
   }
 
   &__item {
+    &:not(:last-child) {
+      @include tablet-max {
+        margin-bottom: 30px;
+      }
+    }
     @include tablet {
-      flex-basis: calc(100% / 2 - 15px);
+      flex-basis: calc((100% - 30px) / 2);
     }
     @include desktop {
-      flex-basis: calc(100% / 4 - 30px);
-    }
-  }
-
-  &__item:not(:last-child) {
-    @include tablet-max {
-      margin-bottom: 30px;
+      flex-basis: calc((100% - 120px) / 4);
+      margin-left: 30px;
     }
   }
 

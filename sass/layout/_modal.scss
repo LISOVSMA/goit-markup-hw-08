@@ -148,8 +148,18 @@
       background-image 250ms var(--timing-function);
   }
   &__link {
+    position: relative;
     @include font(400, 14px, 24px, 0.03em);
     color: var(--accent-color);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--accent-color);
+    }
   }
   &__button {
     display: flex;
