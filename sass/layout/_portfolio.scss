@@ -1,6 +1,12 @@
 .portfolio {
   &__button-set {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+    @include desktop {
+      margin-bottom: 50px;
+    }
   }
   &__list {
     display: flex;
@@ -10,7 +16,7 @@
   }
 
   &__item {
-    flex-basis: calc(100% / 3 - 30px);
+    flex-basis: 100%;
     margin-left: 30px;
     margin-top: 30px;
     transition: box-shadow 250ms var(--timing-function);
@@ -19,6 +25,12 @@
       box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
         1px 4px 6px rgb(0 0 0 / 16%);
     }
+    @include tablet {
+      flex-basis: calc(100% / 2 - 30px);
+    }
+    @include desktop {
+      flex-basis: calc(100% / 3 - 30px);
+    }
   }
 
   &__item:hover &__overlay,
@@ -26,9 +38,24 @@
     transform: translateY(0);
   }
 
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &__thumb {
     position: relative;
     overflow: hidden;
+  }
+
+  &__image {
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 370px;
+    }
   }
 
   &__overlay {
@@ -49,6 +76,7 @@
     padding: 20px 24px;
     margin-top: 0;
     border: 1px solid var(--overlay-color);
+    flex-grow: 1;
   }
 
   &__title {
@@ -64,10 +92,14 @@
 }
 
 .button-set {
-  @include flex-align-justify;
-
-  &__list:not(:last-child) {
-    margin-right: 8px;
+  display: flex;
+  gap: 8px;
+  @include tablet-max {
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+  @include tablet {
+    justify-content: center;
   }
 
   &__filter {

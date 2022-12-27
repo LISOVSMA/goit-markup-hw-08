@@ -739,7 +739,17 @@ img {
 }
 
 .portfolio__button-set {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__button-set {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__button-set {
+    margin-bottom: 50px;
+  }
 }
 .portfolio__list {
   display: flex;
@@ -748,7 +758,7 @@ img {
   margin-top: -30px;
 }
 .portfolio__item {
-  flex-basis: calc(33.3333333333% - 30px);
+  flex-basis: 100%;
   margin-left: 30px;
   margin-top: 30px;
   transition: box-shadow 250ms var(--timing-function);
@@ -756,12 +766,37 @@ img {
 .portfolio__item:hover, .portfolio__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    flex-basis: calc(33.3333333333% - 30px);
+  }
+}
 .portfolio__item:hover .portfolio__overlay, .portfolio__link:focus .portfolio__overlay {
   transform: translateY(0);
+}
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .portfolio__thumb {
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__image {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__image {
+    width: 370px;
+  }
 }
 .portfolio__overlay {
   position: absolute;
@@ -783,6 +818,7 @@ img {
   padding: 20px 24px;
   margin-top: 0;
   border: 1px solid var(--overlay-color);
+  flex-grow: 1;
 }
 .portfolio__title {
   margin-bottom: 4px;
@@ -802,11 +838,18 @@ img {
 
 .button-set {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 8px;
 }
-.button-set__list:not(:last-child) {
-  margin-right: 8px;
+@media screen and (max-width: 767px) {
+  .button-set {
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button-set {
+    justify-content: center;
+  }
 }
 .button-set__filter {
   padding: 6px 22px;
