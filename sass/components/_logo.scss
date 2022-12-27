@@ -1,7 +1,4 @@
 .logo {
-  display: block;
-  padding-top: 16px;
-  padding-bottom: 16px;
   font-family: var(--secondary-font);
   color: var(--secondary-text-color);
   @include font(700, 24px, 28px, 0.03em);
@@ -9,6 +6,11 @@
     @include font(700, 26px, 31px, 0.03em);
   }
   &--inverse {
+    @include tablet-max {
+      display: block;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
     color: var(--logo-color);
     @include tablet {
       margin-right: 88px;

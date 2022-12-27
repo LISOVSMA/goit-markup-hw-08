@@ -2,12 +2,37 @@
   padding: 60px 0px;
   background-color: var(--secondary-background-color);
   &__box {
-    display: flex;
-    align-items: baseline;
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+    }
   }
+  &__tablet {
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+    @include desktop {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 0;
+    }
+  }
+
   &__section {
-    margin-right: 70px;
+    @include desktop-max {
+      text-align: center;
+    }
+    @include tablet-max {
+      margin-bottom: 60px;
+    }
+    @include desktop {
+      margin-right: 70px;
+    }
   }
+
   &__address {
     margin-top: 28px;
   }
@@ -19,18 +44,21 @@
     @include font(700, 14px, 16px, 0.03em);
     text-transform: uppercase;
     color: var(--secondary-text-color);
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
   }
-}
-
-.nav {
-  display: inline-block;
 }
 
 .address {
   font-style: normal;
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
   &__post {
     color: var(--secondary-text-color);
-    @include font(400, 14px, 24px, 0.03em);
+    @include font(400, 14px, 16px, 0.03em);
     transition: color 250ms var(--timing-function);
     &:hover,
     &:focus {
@@ -38,10 +66,8 @@
     }
   }
   &__contacts {
-    display: block;
-    margin-top: 12px;
     color: var(--transparent-color);
-    @include font(400, 14px, 24px, 0.03em);
+    @include font(400, 14px, 16px, 0.03em);
     transition: color 250ms var(--timing-function);
     &:hover,
     &:focus {
@@ -51,21 +77,30 @@
 }
 
 .soc-media {
-  display: inline-block;
   &__text {
     margin-bottom: 20px;
     color: var(--secondary-text-color);
     @include font(700, 14px, 16px, 0.03em);
     text-transform: uppercase;
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
   }
 }
 
 .form {
-  @include flex-align-justify;
+  @include desktop {
+    @include flex-align-justify;
+  }
   &__input {
-    width: 358px;
-    height: 50px;
-    padding-left: 16px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    max-width: 450px;
+    width: 100%;
+    padding: 15px 16px;
     @include font(400, 16px, 20px, 0.03em);
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -79,19 +114,32 @@
       outline: none;
       border-color: var(--accent-color);
     }
-
     &::placeholder {
       @include font(400, 16px, 20px, 0.03em);
       color: rgba(255, 255, 255, 0.6);
+    }
+    @include desktop {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 12px;
+      width: 358px;
     }
   }
 
   &__button {
     @include flex-align-justify;
-    margin-left: 12px;
     padding: 0;
     width: 200px;
     height: 50px;
+
+    @include desktop-max {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include desktop {
+      display: inline-flex;
+    }
   }
 
   &__item {
