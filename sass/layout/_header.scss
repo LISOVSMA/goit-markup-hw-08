@@ -1,11 +1,13 @@
 .header {
   position: relative;
-  border-bottom: 1px solid var(--line-color);
   &__box {
     @include flex-align;
   }
   &__auth-nav {
     margin-left: auto;
+  }
+  &--inverse {
+    border-bottom: 1px solid var(--line-color);
   }
 }
 

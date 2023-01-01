@@ -221,7 +221,6 @@ img {
 
 .header {
   position: relative;
-  border-bottom: 1px solid var(--line-color);
 }
 .header__box {
   display: flex;
@@ -229,6 +228,9 @@ img {
 }
 .header__auth-nav {
   margin-left: auto;
+}
+.header--inverse {
+  border-bottom: 1px solid var(--line-color);
 }
 
 .navigation {
